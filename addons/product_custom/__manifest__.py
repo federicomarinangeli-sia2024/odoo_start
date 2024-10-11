@@ -1,4 +1,3 @@
-# __manifest__.py
 {
     'name': 'Product Custom Fields',
     'version': '1.0',
