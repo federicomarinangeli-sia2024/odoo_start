@@ -10,6 +10,7 @@
     'depends': ['product'],  # Dipendenza dal modulo 'product'
     'data': [
         'views/product_template_view.xml',  # Include il file XML per le viste
+        'views/product_template_search_view.xml',  # Include il file XML per i filtri di ricerca
     ],
     'installable': True,
     'auto_install': False,
