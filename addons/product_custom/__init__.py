@@ -1,3 +1,3 @@
 # __init__.py
-from . import product_template
+from . import models
 
