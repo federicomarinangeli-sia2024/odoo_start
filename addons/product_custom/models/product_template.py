@@ -1,4 +1,3 @@
-# models/product_template.py
 from odoo import models, fields
 
 class ProductTemplate(models.Model):
@@ -20,14 +19,12 @@ class ProductTemplate(models.Model):
             ('abruzzo', 'Abruzzo'),
             ('molise', 'Molise'),
             ('veneto', 'Veneto'),
-            ('friuli', 'Friuli-Venezia Giulia'),
+            ('friuli', 'Friuli-Venezia Giulia')
         ],
-        string='Regione',
-        required=True,  # Rende obbligatorio il campo
+        string="Regione"
     )
 
     # Campo per inserire la località
     localita = fields.Char(
-        string='Località',
-        required=True,  # Rende obbligatorio il campo
+        string="Località"
     )
