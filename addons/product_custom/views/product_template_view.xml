@@ -21,7 +21,7 @@
         <field name="arch" type="xml">
             <search>
                 <filter string="Regione" name="filter_regione" domain="[('regione', '=', self)]"/>
-                <filter string="Località" name="filter_localita" domain="[('localita', '=', self)]"/>
+                <filter string="Localita" name="filter_localita" domain="[('localita', '=', self)]"/>
             </search>
         </field>
     </record>

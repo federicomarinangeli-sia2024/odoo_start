@@ -4,6 +4,7 @@ from odoo import models, fields
 class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
+    # Campo per la selezione della regione con un menu a tendina
     regione = fields.Selection(
         [
             ('liguria', 'Liguria'),
@@ -19,9 +20,14 @@ class ProductTemplate(models.Model):
             ('abruzzo', 'Abruzzo'),
             ('molise', 'Molise'),
             ('veneto', 'Veneto'),
-            ('friuli', 'Friuli-Venezia Giulia')
+            ('friuli', 'Friuli-Venezia Giulia'),
         ],
-        string="Regione"
+        string='Regione',
+        required=True,  # Rende obbligatorio il campo
     )
 
-    localita = fields.Char(string="Località")
+    # Campo per inserire la località
+    localita = fields.Char(
+        string='Località',
+        required=True,  # Rende obbligatorio il campo
+    )
