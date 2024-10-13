@@ -1,5 +1,5 @@
 {
-    'name': 'Umbrella Availability',
+    'name': 'umbrella_availability',
     'version': '1.0',
     'depends': ['product', 'website_sale'],
     'category': 'Custom',
