@@ -1,0 +1,12 @@
+#. module: umbrella_availability
+#: model:ir.ui.menu,name:umbrella_availability.menu_title
+msgid "Umbrella Availability"
+msgstr "Disponibilità Ombrelloni"
+
+#: model:ir.ui.view,arch_db:umbrella_availability.form
+msgid "Rows"
+msgstr "File"
+
+#: model:ir.ui.view,arch_db:umbrella_availability.form
+msgid "Umbrellas per Row"
+msgstr "Ombrelloni per Fila"

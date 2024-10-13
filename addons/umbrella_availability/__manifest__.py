@@ -1,15 +1,18 @@
 {
-    'name': 'umbrella_availability',
-    'version': '1.0',
-    'depends': ['product', 'website_sale'],
-    'category': 'Custom',
-    'summary': 'Gestione della disponibilità degli ombrelloni',
-    'description': """
-        Aggiunge la disponibilità degli ombrelloni e un calendario per visualizzare le disponibilità in base alla data.
-    """,
+    'name': 'Umbrella Availability',
+    'summary': 'Manage the availability of umbrellas',
+    'description': """Manage availability per row and quantity of umbrellas""",
+    'author': 'Your Company',
+    'website': 'http://www.yourcompany.com',
+    'category': 'Website',
+    'version': '14.0.1.0',
+    'depends': ['website_sale'],
     'data': [
+        'security/ir.model.access.csv',
         'views/umbrella_availability_views.xml',
+        'i18n/it.po',  # Questo carica la traduzione in italiano
     ],
     'installable': True,
+    'application': False,
     'auto_install': False,
 }

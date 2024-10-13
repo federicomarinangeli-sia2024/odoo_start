@@ -1,4 +1,5 @@
 <odoo>
+    <!-- Vista esistente per la disponibilità degli ombrelloni -->
     <record id="view_product_template_umbrella_availability" model="ir.ui.view">
         <field name="name">product.template.umbrella.availability.form</field>
         <field name="model">product.template</field>
@@ -13,4 +14,49 @@
             </xpath>
         </field>
     </record>
+
+    <!-- Nuova vista per la disponibilità degli ombrelloni -->
+    <record id="view_umbrella_availability_form" model="ir.ui.view">
+        <field name="name">umbrella.availability.form</field>
+        <field name="model">umbrella.availability</field>
+        <field name="arch" type="xml">
+            <form string="Disponibilità Ombrelloni">
+                <group>
+                    <field name="fila"/>
+                    <field name="ombrelloni_disponibili"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Aggiungere la vista all'elenco (tree) -->
+    <record id="view_umbrella_availability_tree" model="ir.ui.view">
+        <field name="name">umbrella.availability.tree</field>
+        <field name="model">umbrella.availability</field>
+        <field name="arch" type="xml">
+            <tree string="Disponibilità Ombrelloni">
+                <field name="fila"/>
+                <field name="ombrelloni_disponibili"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Aggiungere l'azione per aprire la vista -->
+    <record id="action_umbrella_availability" model="ir.actions.act_window">
+        <field name="name">Disponibilità Ombrelloni</field>
+        <field name="res_model">umbrella.availability</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>
+                Qui puoi gestire la disponibilità degli ombrelloni.
+            </p>
+        </field>
+    </record>
+
+    <!-- Aggiungere l'elemento di menu -->
+    <menuitem id="menu_umbrella_availability"
+              name="Disponibilità Ombrelloni"
+              parent="website.menu_website_configuration"
+              action="action_umbrella_availability"
+              sequence="10"/>
 </odoo>
