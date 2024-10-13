@@ -1,7 +1,7 @@
 <odoo>
     <!-- Form view inheritance to add 'regione' and 'localita' fields -->
     <record id="view_product_template_form_inherit" model="ir.ui.view">
-        <field name="name">product.template.form.inherit</field>
+        <field name="name">product.template.inherit</field>
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_only_form_view"/>
         <field name="arch" type="xml">
@@ -9,6 +9,14 @@
             <xpath expr="//field[@name='categ_id']" position="after">
                 <field name="regione"/>
                 <field name="localita"/>
+            </xpath>
+            <!-- Aggiungi i campi relativi agli ombrelloni -->
+            <xpath expr="//sheet" position="inside">
+                <group string="Disponibilità Ombrelloni">
+                    <field name="fila_ombrelloni"/>
+                    <field name="ombrelloni_per_fila"/>
+                    <field name="disponibilita_ombrelloni"/>
+                </group>
             </xpath>
         </field>
     </record>
@@ -21,7 +29,7 @@
         <field name="arch" type="xml">
             <search>
                 <filter string="Regione" name="filter_regione" domain="[('regione', '=', self)]"/>
-                <filter string="Localita" name="filter_localita" domain="[('localita', '=', self)]"/>
+                <filter string="Località" name="filter_localita" domain="[('localita', '=', self)]"/>
             </search>
         </field>
     </record>
