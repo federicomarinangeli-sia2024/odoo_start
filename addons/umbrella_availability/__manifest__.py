@@ -6,7 +6,7 @@
     'website': 'http://www.yourcompany.com',
     'category': 'Website',
     'version': '14.0.1.0',
-    'depends': ['website_sale'],
+    'depends': ['website_sale', 'product', 'product_custom'],  # Aggiunte dipendenze da product e product_custom
     'data': [
         'security/ir.model.access.csv',
         'views/umbrella_availability_views.xml',
