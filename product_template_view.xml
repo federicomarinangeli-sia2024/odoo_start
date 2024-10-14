@@ -1,0 +1,77 @@
+<odoo>
+    <record id="view_beach_establishment_form" model="ir.ui.view">
+        <field name="name">beach.establishment.form</field>
+        <field name="model">beach.establishment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="region"/>
+                        <field name="city"/>
+                        <field name="concession_number"/>
+                    </group>
+                    <group>
+                        <field name="umbrella_count_per_row"/>
+                        <field name="row_count"/>
+                    </group>
+                    <group>
+                        <field name="price_first_row"/>
+                        <field name="price_other_rows"/>
+                        <field name="starting_price" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="image" widget="image"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="menu_beach_establishment_root" name="Stabilimenti" sequence="10"/>
+    <menuitem id="menu_beach_establishment" name="Gestione Stabilimenti" parent="menu_beach_establishment_root" sequence="10" action="action_beach_establishment"/>
+    
+    <record id="action_beach_establishment" model="ir.actions.act_window">
+        <field name="name">Stabilimenti</field>
+        <field name="res_model">beach.establishment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
+<!--codice vecchio non modificato-->
+    <!-- Form view inheritance to add 'regione' and 'localita' fields -->
+    <!--record id="view_product_template_form_inherit" model="ir.ui.view">
+        <field name="name">product.template.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            < Inserisci i campi Regione e Località dopo la categoria del prodotto -->
+            <!--xpath expr="//field[@name='categ_id']" position="after">
+                #<field name="regione"/>
+                <#field name="localita"/>
+            </xpath>
+            <!Aggiungi i campi relativi agli ombrelloni -->
+            <!--xpath expr="//sheet" position="inside">
+                <group string="Disponibilità Ombrelloni">
+                    <field name="fila_ombrelloni"/>
+                    <field name="ombrelloni_per_fila"/>
+                    <field name="disponibilita_ombrelloni"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <Search view to add filters for 'regione' and 'localita' -->
+    <!--record id="product_template_search_view_custom" model="ir.ui.view">
+        <field name="name">product.template.search.custom</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+            <search>
+                <filter string="Regione" name="filter_regione" domain="[('regione', '=', self)]"/>
+                <filter string="Località" name="filter_localita" domain="[('localita', '=', self)]"/>
+            </search>
+        </field>
+    </record>
+</odoo>
+
+
