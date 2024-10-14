@@ -5,7 +5,23 @@ class BeachEstablishment(models.Model):
     _description = 'Beach Establishment'
 
     name = fields.Char(string='Stabilimento', required=True)
-    region = fields.Many2one('res.country.state', string='Regione', required=True)
+    region = fields.Selection([
+    ('liguria', 'Liguria'),
+    ('toscana', 'Toscana'),
+    ('lazio', 'Lazio'),
+    ('campania', 'Campania'),
+    ('calabria', 'Calabria'),
+    ('sicilia', 'Sicilia'),
+    ('sardegna', 'Sardegna'),
+    ('puglia', 'Puglia'),
+    ('basilicata', 'Basilicata'),
+    ('marche', 'Marche'),
+    ('abruzzo', 'Abruzzo'),
+    ('molise', 'Molise'),
+    ('veneto', 'Veneto'),
+    ('friuli', 'Friuli-Venezia Giulia')
+    ], string='Regione')
+
     city = fields.Char(string='Città o Località', required=True)
     concession_number = fields.Char(string='Numero Concessione')
 

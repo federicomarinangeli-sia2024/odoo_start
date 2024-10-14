@@ -27,7 +27,7 @@
             </form>
         </field>
     </record>
-    
+
     <record id="action_beach_establishment" model="ir.actions.act_window">
         <field name="name">Stabilimenti</field>
         <field name="res_model">beach.establishment</field>

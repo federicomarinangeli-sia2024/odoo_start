@@ -1,3 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_umbrella_availability_user,access_umbrella_availability,model_umbrella_availability,base.group_user,1,1,1,1
-
+access_beach_establishment,access_beach_establishment,model_beach_establishment,,1,1,1,1

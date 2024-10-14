@@ -23,8 +23,8 @@
     'version': '1.0',
     'summary': 'Custom product module for beach establishments',
     'description': """
-        This module customizes the product model to handle beach establishments
-        with availability of umbrellas, different prices, and booking functionality.
+        Custom module for defining beach establishments, including regions, localities,
+        and prices for different rows of umbrellas.
     """,
     'category': 'Sales',
     'depends': ['base', 'product', 'website_sale'],
