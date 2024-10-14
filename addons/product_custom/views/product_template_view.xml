@@ -27,15 +27,17 @@
             </form>
         </field>
     </record>
-
-    <menuitem id="menu_beach_establishment_root" name="Stabilimenti" sequence="10"/>
-    <menuitem id="menu_beach_establishment" name="Gestione Stabilimenti" parent="menu_beach_establishment_root" sequence="10" action="action_beach_establishment"/>
     
     <record id="action_beach_establishment" model="ir.actions.act_window">
         <field name="name">Stabilimenti</field>
         <field name="res_model">beach.establishment</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+    <menuitem id="menu_beach_establishment_root" name="Stabilimenti" sequence="10"/>
+    <menuitem id="menu_beach_establishment" name="Gestione Stabilimenti" parent="menu_beach_establishment_root" sequence="10" action="action_beach_establishment"/>
+    
+   
 </odoo>
 <!--codice vecchio non modificato-->
     <!-- Form view inheritance to add 'regione' and 'localita' fields -->
