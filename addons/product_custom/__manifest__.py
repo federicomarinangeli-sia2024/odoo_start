@@ -29,7 +29,7 @@
     'category': 'Sales',
     'depends': ['base', 'product', 'website_sale'],
     'data': [
-        'views/product_custom_view.xml',
+        'views/product_template_view.xml',
         'security/ir.model.access.csv',
     ],
     'installable': True,
