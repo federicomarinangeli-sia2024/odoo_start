@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Definizione del gruppo per i gestori degli stabilimenti -->
+        <record id="group_umbrella_manager" model="res.groups">
+            <field name="name">Gestore Stabilimento</field>
+            <field name="category_id" ref="base.module_category_sales_management"/>
+        </record>
+        
+        <!-- Definizione del gruppo per utenti con solo accesso in lettura -->
+        <record id="group_umbrella_user" model="res.groups">
+            <field name="name">Utente Stabilimento</field>
+            <field name="category_id" ref="base.module_category_sales_management"/>
+        </record>
+
+        <!-- Regole di accesso per i gestori degli stabilimenti che concede ai gestori il controllo completo sui dati del modello umbrella.stabilimento.-->
+        <record id="rule_umbrella_manager_access" model="ir.rule">
+            <field name="name">Regole di accesso per i gestori degli stabilimenti</field>
+            <field name="model_id" ref="model_umbrella_stabilimento"/>
+            <field name="groups" eval="[(4, ref('group_umbrella_manager'))]"/>
+            <field name="domain_force">[]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Regole di accesso per gli utenti con solo accesso in lettura, che limita gli utenti normali alla sola lettura-->
+        <record id="rule_umbrella_user_access" model="ir.rule">
+            <field name="name">Regole di accesso per gli utenti con accesso in lettura</field>
+            <field name="model_id" ref="model_umbrella_stabilimento"/>
+            <field name="groups" eval="[(4, ref('group_umbrella_user'))]"/>
+            <field name="domain_force">[]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+    </data>
+</odoo>

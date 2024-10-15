@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_stabilimento_tree" model="ir.ui.view">
+        <field name="name">umbrella.stabilimento.tree</field>
+        <field name="model">umbrella.stabilimento</field>
+        <field name="arch" type="xml">
+            <tree string="Stabilimenti">
+                <field name="name"/>
+                <field name="regione"/>
+                <field name="localita"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_stabilimento_form" model="ir.ui.view">
+        <field name="name">umbrella.stabilimento.form</field>
+        <field name="model">umbrella.stabilimento</field>
+        <field name="arch" type="xml">
+            <form string="Stabilimento">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="regione"/>
+                        <field name="localita"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="umbrella_availability_menu" name="Umbrella Availability" parent="website_sale.menu_shop" sequence="10"/>
+
+    <menuitem id="menu_stabilimento" name="Stabilimenti" parent="umbrella_availability_menu" sequence="1"/>
+
+    <act_window id="action_stabilimento"
+                name="Stabilimenti"
+                res_model="umbrella.stabilimento"
+                view_mode="tree,form"
+                menu_id="menu_stabilimento"/>
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_umbrella_stabilimento_manager,access_umbrella_stabilimento,model_umbrella_stabilimento,group_umbrella_manager,1,1,1,1
+access_umbrella_stabilimento_user,access_umbrella_stabilimento,model_umbrella_stabilimento,group_umbrella_user,1,0,0,0
+access_umbrella_ombrellone_manager,access_umbrella_ombrellone,model_umbrella_ombrellone,group_umbrella_manager,1,1,1,1
+access_umbrella_ombrellone_user,access_umbrella_ombrellone,model_umbrella_ombrellone,group_umbrella_user,1,0,0,0
