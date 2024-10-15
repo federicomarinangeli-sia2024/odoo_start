@@ -43,7 +43,7 @@
 -->
 
 <odoo>
-    <!-- Vista ad elenco (Tree) per Stabilimenti -->
+    <!-- Vista a elenco (Tree) per Ombrelloni -->
     <record id="view_stabilimento_tree" model="ir.ui.view">
         <field name="name">umbrella.stabilimento.tree</field>
         <field name="model">umbrella.stabilimento</field>
