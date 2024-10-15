@@ -41,9 +41,67 @@
                 menu_id="menu_stabilimento"/>
 </odoo>
 -->
-
+<!-- questo gira
 <odoo>
-    <!-- Vista a elenco (Tree) per Ombrelloni -->
+    <record id="view_stabilimento_tree" model="ir.ui.view">
+        <field name="name">umbrella.stabilimento.tree</field>
+        <field name="model">umbrella.stabilimento</field>
+        <field name="arch" type="xml">
+            <tree string="Stabilimenti">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_stabilimento_form" model="ir.ui.view">
+        <field name="name">umbrella.stabilimento.form</field>
+        <field name="model">umbrella.stabilimento</field>
+        <field name="arch" type="xml">
+            <form string="Stabilimento">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
+-->
+
+<!-- questo gira
+<odoo>
+    <record id="view_stabilimento_tree" model="ir.ui.view">
+        <field name="name">umbrella.stabilimento.tree</field>
+        <field name="model">umbrella.stabilimento</field>
+        <field name="arch" type="xml">
+            <tree string="Stabilimenti">
+                <field name="name"/>
+                <field name="regione"/>
+                <field name="localita"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_stabilimento_form" model="ir.ui.view">
+        <field name="name">umbrella.stabilimento.form</field>
+        <field name="model">umbrella.stabilimento</field>
+        <field name="arch" type="xml">
+            <form string="Stabilimento">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="regione"/>
+                        <field name="localita"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
+-->
+<odoo>
+    <!-- Vista ad elenco (Tree) per Stabilimenti -->
     <record id="view_stabilimento_tree" model="ir.ui.view">
         <field name="name">umbrella.stabilimento.tree</field>
         <field name="model">umbrella.stabilimento</field>
@@ -83,7 +141,5 @@
     <act_window id="action_stabilimento"
         name="Stabilimenti"
         res_model="umbrella.stabilimento"
-        view_mode="tree,form"
-        menu_id="menu_stabilimento"/>
+        view_mode="tree,form"/>
 </odoo>
-
