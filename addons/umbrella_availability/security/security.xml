@@ -4,13 +4,13 @@
         <!-- Definizione del gruppo per i gestori degli stabilimenti -->
         <record id="group_umbrella_manager" model="res.groups">
             <field name="name">Gestore Stabilimento</field>
-            <field name="category_id" ref="base.module_category_sales_management"/>
+            <field name="category_id" ref="base.module_category_sales"/>
         </record>
         
         <!-- Definizione del gruppo per utenti con solo accesso in lettura -->
         <record id="group_umbrella_user" model="res.groups">
             <field name="name">Utente Stabilimento</field>
-            <field name="category_id" ref="base.module_category_sales_management"/>
+            <field name="category_id" ref="base.module_category_sales"/>
         </record>
 
         <!-- Regole di accesso per i gestori degli stabilimenti che concede ai gestori il controllo completo sui dati del modello umbrella.stabilimento.-->
