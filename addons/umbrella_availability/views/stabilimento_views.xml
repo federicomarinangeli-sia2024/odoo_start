@@ -41,7 +41,7 @@
                 menu_id="menu_stabilimento"/>
 </odoo>
 -->
-<?xml version="1.0" encoding="UTF-8"?>
+
 <odoo>
     <!-- Vista ad elenco (Tree) per Stabilimenti -->
     <record id="view_stabilimento_tree" model="ir.ui.view">
