@@ -14,6 +14,7 @@
         'security/security.xml',
         'security/ir.model.access.csv',
         'views/stabilimento_views.xml',
+        'views/ombrellone_views.xml',
     ],
     'installable': True,
     'application': False,

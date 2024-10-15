@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Vista a elenco (Tree) per Ombrelloni -->
+    <record id="view_ombrellone_tree" model="ir.ui.view">
+        <field name="name">umbrella.ombrellone.tree</field>
+        <field name="model">umbrella.ombrellone</field>
+        <field name="arch" type="xml">
+            <tree string="Ombrelloni">
+                <field name="name"/>
+                <field name="stabilimento_id"/>
+                <field name="numero_per_fila"/>
+                <field name="numero_file"/>
+                <field name="prezzo"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista a modulo (Form) per Ombrelloni -->
+    <record id="view_ombrellone_form" model="ir.ui.view">
+        <field name="name">umbrella.ombrellone.form</field>
+        <field name="model">umbrella.ombrellone</field>
+        <field name="arch" type="xml">
+            <form string="Ombrellone">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="stabilimento_id"/>
+                        <field name="numero_per_fila"/>
+                        <field name="numero_file"/>
+                        <field name="prezzo"/>
+                    </group>
+                    <notebook>
+                        <page string="Disponibilità">
+                            <field name="disponibilita_ids">
+                                <tree>
+                                    <field name="data"/>
+                                    <field name="prenotato"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="data"/>
+                                        <field name="prenotato"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Azione per la gestione degli Ombrelloni -->
+    <record id="action_ombrellone" model="ir.actions.act_window">
+        <field name="name">Ombrelloni</field>
+        <field name="res_model">umbrella.ombrellone</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu per Ombrelloni -->
+    <menuitem id="menu_ombrellone" name="Ombrelloni" parent="umbrella_availability_menu" sequence="2" action="action_ombrellone"/>
+</odoo>
