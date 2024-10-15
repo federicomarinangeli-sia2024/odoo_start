@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
 <odoo>
+
     <record id="view_stabilimento_tree" model="ir.ui.view">
         <field name="name">umbrella.stabilimento.tree</field>
         <field name="model">umbrella.stabilimento</field>
@@ -37,4 +39,16 @@
                 res_model="umbrella.stabilimento"
                 view_mode="tree,form"
                 menu_id="menu_stabilimento"/>
+</odoo>
+-->
+<odoo>
+    <record id="view_stabilimento_tree" model="ir.ui.view">
+        <field name="name">umbrella.stabilimento.tree</field>
+        <field name="model">umbrella.stabilimento</field>
+        <field name="arch" type="xml">
+            <tree string="Stabilimenti">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
 </odoo>
