@@ -30,9 +30,10 @@
                         <field name="prezzo"/>
                     </group>
                     <notebook>
+                    <!-- stiamo utilizzando il tag <notebook> per organizzare le informazioni del modulo Ombrellone e includere una scheda per gestire la disponibilità degli ombrelloni. -->
                         <page string="Disponibilità">
                             <field name="disponibilita_ids">
-                                <tree>
+                                <tree string="Disponibilità Ombrellone">
                                     <field name="data"/>
                                     <field name="prenotato"/>
                                 </tree>
