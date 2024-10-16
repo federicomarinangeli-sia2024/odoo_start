@@ -233,50 +233,6 @@
         </xpath>
     </template>
 
-    <template id="website_sale_products_search_box" inherit_id="website.website_search_box" primary="True">
-        <xpath expr="//input[@name='search']" position="before">
-        <!-- Menu a tendina per la Regione -->
-            <div class="dropdown">
-                <select class="custom-select" id="select-region" name="region">
-                    <option value="" selected="selected">Seleziona la regione</option>
-                    <option value="liguria">Liguria</option>
-                    <option value="toscana">Toscana</option>
-                    <option value="lazio">Lazio</option>
-                    <option value="campania">Campania</option>
-                    <option value="calabria">Calabria</option>
-                    <option value="sicilia">Sicilia</option>
-                    <option value="sardegna">Sardegna</option>
-                    <option value="puglia">Puglia</option>
-                    <option value="basilicata">Basilicata</option>
-                    <option value="marche">Marche</option>
-                    <option value="abruzzo">Abruzzo</option>
-                    <option value="molise">Molise</option>
-                    <option value="veneto">Veneto</option>
-                    <option value="friuli">Friuli-Venezia Giulia</option>
-                </select>
-            </div>
-        
-        <!-- Selettore di Date -->
-            <div class="input-group date" id="datepicker">
-                <input type="text" class="form-control" placeholder="Seleziona la data"/>
-                <span class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button">
-                        <i class="fa fa-calendar"></i>
-                    </button>
-                </span>
-            </div>
-        </xpath>
-
-        <xpath expr="//div[@role='search']" position="replace">
-            <form t-attf-class="o_wsale_products_searchbar_form o_wait_lazy_js #{_classes}" t-att-action="action if action else '/shop'" method="get" t-att-data-snippet="_snippet">
-                <t>$0</t>
-                <input name="order" type="hidden" class="o_wsale_search_order_by" value=""/>
-                <t t-raw="0"/>
-            </form>
-        </xpath>
-    </template>
-
-
     <template id="search" name="Search Box">
         <t t-call="website_sale.website_sale_products_search_box">
             <t t-set="action" t-value="keep('/shop'+ ('/category/'+slug(category)) if category else None, search=0)"/>

@@ -9,12 +9,6 @@
                 <separator/>
                 <filter string="Published" name="published" domain="[('is_published', '=', True)]"/>
             </xpath>
-            <!-- Aggiungi i campi Regione e Località per la ricerca -->
-            <xpath expr="//filter[@name='published']" position="after">
-                <separator/>
-                <filter string="Regione" name="filter_regione" domain="[('regione', 'ilike', self)]"/>
-                <filter string="Località" name="filter_localita" domain="[('localita', 'ilike', self)]"/>
-            </xpath>
         </field>
     </record>
 
@@ -113,12 +107,6 @@
                 <group name="product_template_images" string="Extra Product Media">
                     <field name="product_template_image_ids" class="o_website_sale_image_list" context="{'default_name': name}" mode="kanban" options="{'create_text':'Add a Media'}" nolabel="1"/>
                 </group>
-                <!-- INIZIO MODIFICA -->
-                <group>
-                    <field name="regione"/>
-                    <field name="localita"/>
-                </group>
-                <!-- FINE MODIFICA -->
             </page>
         </xpath>
     </field>
